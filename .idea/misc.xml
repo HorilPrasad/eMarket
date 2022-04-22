@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/drawable/bg_gradiant.xml" value="0.1495" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/drawable/bg_gradient.xml" value="0.1" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/drawable/gradient1.xml" value="0.1995" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_add_address.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_add_product.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_forget_password.xml" value="0.1" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_main.xml" value="0.17" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_product_details.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_product_list.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_shop_dashboard.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_shop_login.xml" value="0.22" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_shop_register.xml" value="0.15" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_user_login.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_user_sign_up.xml" value="0.33" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/activity_verify_email.xml" value="0.17760416666666667" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/dialog_searchable_spinner.xml" value="0.1" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/fragment_account.xml" value="0.1" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/fragment_orders.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/product_item.xml" value="0.18" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/layout/shop_item.xml" value="0.1" />
+        <entry key="..\:/Users/Horil/eMarket/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1875" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
