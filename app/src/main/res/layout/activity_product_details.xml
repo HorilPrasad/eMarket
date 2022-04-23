@@ -25,7 +25,7 @@
             android:padding="4dp"
             />
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/shopName"
+            android:id="@+id/shopName_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -61,7 +61,7 @@
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/productImage"
+                android:id="@+id/productImage_details"
                 android:layout_width="match_parent"
                 android:layout_height="278dp"
                 android:layout_marginStart="10dp"
@@ -71,7 +71,7 @@
                 android:src="@drawable/image"/>
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/productName"
+                android:id="@+id/productName_details"
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:layout_marginStart="5dp"
@@ -100,7 +100,7 @@
                     />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/productPrice"
+                    android:id="@+id/productPrice_details"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="3dp"
@@ -174,7 +174,7 @@
                 android:textStyle="bold"
                 />
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/productDescription"
+                android:id="@+id/productDescription_details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Porting devices across a professional set up can be a very useful accessory for professionals who seek seamless connectivity every time! Besides there are few such gadgets that really do the deal when it comes to helping with multiple porting! This is where Mport 4B fits the picture. It saves all your trouble that comes associated with multitasking. This multiport USB hub has 4 separate USB ports to plug in devices at the same time. Besides it has 1 Type C port for extra power data transaction from a larger device that needs more power for the procedure. Mport 4B uses lightning speed in device transaction and with the blink of an eye all your tasks are accomplished. It is built for the long run and has a sturdy body for maximum longevity. The USB port hub has a great compatibility which is hard to find in its league of hubs and hence makes it unique in its being. If you are someone who juggles multitasking, and needs the perfect aide for so, get your hands on Mport 4B and port into seamless multitasking!"

@@ -5,16 +5,34 @@ public class Shops {
     private String shopName;
     private String shopType;
     private String shopLocation;
-    private String shopImageUrl;
+    private  String userId;
+    private String emailId;
 
     public Shops() {
     }
 
-    public Shops(String shopName, String shopType, String shopLocation, String shopImageUrl) {
+    public Shops(String shopName, String shopType, String shopLocation, String userId, String emailId) {
         this.shopName = shopName;
         this.shopType = shopType;
         this.shopLocation = shopLocation;
-        this.shopImageUrl = shopImageUrl;
+        this.userId = userId;
+        this.emailId = emailId;
+    }
+
+    public String getEmailId() {
+        return emailId;
+    }
+
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getShopName() {
@@ -41,11 +59,4 @@ public class Shops {
         this.shopLocation = shopLocation;
     }
 
-    public String getShopImageUrl() {
-        return shopImageUrl;
-    }
-
-    public void setShopImageUrl(String shopImageUrl) {
-        this.shopImageUrl = shopImageUrl;
-    }
 }

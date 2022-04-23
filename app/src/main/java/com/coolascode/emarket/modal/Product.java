@@ -2,25 +2,46 @@ package com.coolascode.emarket.modal;
 
 public class Product {
     private String productName;
-    private Double productPrice;
-    private String productImageUrl;
+    private String productPrice;
     private String shopUid;
     private String shopType;
+    private String imageUri;
+    private String key;
 
 
     public Product() {
     }
 
-    public Product(String productName, Double productPrice, String productImageUrl, String shopUid, String shopType) {
-        this.productName = productName;
-        this.productPrice = productPrice;
-        this.productImageUrl = productImageUrl;
-        this.shopUid = shopUid;
-        this.shopType = shopType;
-    }
 
     public String getShopUid() {
         return shopUid;
+    }
+
+
+
+    public Product(String productName, String productPrice, String shopUid, String shopType, String imageUri, String key) {
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.shopUid = shopUid;
+        this.shopType = shopType;
+        this.imageUri = imageUri;
+        this.key = key;
+    }
+
+    public String getImageUri() {
+        return imageUri;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public void setImageUri(String imageUri) {
+        this.imageUri = imageUri;
     }
 
     public void setShopUid(String shopUid) {
@@ -43,19 +64,12 @@ public class Product {
         this.productName = productName;
     }
 
-    public Double getProductPrice() {
+    public String getProductPrice() {
         return productPrice;
     }
 
-    public void setProductPrice(Double productPrice) {
+    public void setProductPrice(String productPrice) {
         this.productPrice = productPrice;
     }
 
-    public String getProductImageUrl() {
-        return productImageUrl;
-    }
-
-    public void setProductImageUrl(String productImageUrl) {
-        this.productImageUrl = productImageUrl;
-    }
 }

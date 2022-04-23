@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/productList_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
@@ -16,13 +17,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/productImage"
+                android:id="@+id/productImage_list"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
+                android:layout_marginTop="10dp"
                 android:src="@drawable/image"
                 />
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/productName"
+                android:id="@+id/productName_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Mangat Ram Urad Dal | 1Kg"
@@ -39,16 +41,6 @@
                 android:gravity="center"
                 >
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/priceText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="Price:"
-                    android:padding="5dp"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/rupeeSymbol"
@@ -62,7 +54,7 @@
                     />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/productPrice"
+                    android:id="@+id/productPrice_list"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="100"

@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/shopList_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="2dp"
@@ -18,7 +19,7 @@
                 android:id="@+id/shopImage"
                 android:layout_width="160dp"
                 android:layout_height="160dp"
-                android:src="@drawable/image"/>
+                android:src="@drawable/imgshop"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -27,7 +28,7 @@
                 android:gravity="center_vertical">
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/shopName"
+                    android:id="@+id/shopName_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -36,7 +37,7 @@
                     android:textStyle="bold"
                     android:gravity="center"/>
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/shopCategory"
+                    android:id="@+id/shopCategory_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
@@ -65,7 +66,7 @@
                         />
 
                     <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/shopAddress"
+                        android:id="@+id/shopAddress_list"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="SVBH MNNIT CAMPUS Teliyarganj, Prayagraj"

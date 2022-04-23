@@ -25,7 +25,7 @@
             android:padding="4dp"
             />
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/shopName"
+            android:id="@+id/shopName_product_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -48,6 +48,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/product_list_recycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"

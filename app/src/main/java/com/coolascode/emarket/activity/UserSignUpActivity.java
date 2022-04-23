@@ -43,6 +43,8 @@ public class UserSignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_sign_up);
 
+
+
         rootRef= FirebaseDatabase.getInstance().getReference();
 
         TextView sellerSignUp=findViewById(R.id.forSellerBtn);
