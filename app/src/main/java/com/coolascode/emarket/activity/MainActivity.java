@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FusedLocationProviderClient fusedLocationProviderClient;
     BottomNavigationView bottomNavigationView;
+    ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 //                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
 //        }
 
+        dialog = new ProgressDialog(this);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListner);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
@@ -124,15 +126,24 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    void loading()
+    {
+        dialog.setCancelable(false);
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.setMessage("Loading Please Wait...");
+        dialog.show();
+    }
     @Override
     protected void onStart() {
         super.onStart();
+        loading();
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
 
         if(currentUser == null){
             startActivity(new Intent(MainActivity.this,UserLoginActivity.class));
+            dialog.dismiss();
             finishAffinity();
         }else
         {
@@ -141,9 +152,10 @@ public class MainActivity extends AppCompatActivity {
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if (snapshot.hasChild(currentUser.getUid())){
                         startActivity(new Intent(MainActivity.this,ShopDashboardActivity.class));
-
+                        dialog.dismiss();
                         finishAffinity();
                     }else{
+                        dialog.dismiss();
 //                        bottomNavigationView.setOnNavigationItemSelectedListener(navListner);
 //                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
 
@@ -153,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
-
+                    dialog.dismiss();
                 }
             });
         }

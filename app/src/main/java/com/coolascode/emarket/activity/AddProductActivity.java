@@ -149,7 +149,8 @@ rootRef.child("Shops").child(currentUid).addValueEventListener(new ValueEventLis
 
         if(selectedImage!=null){
             FirebaseStorage storage = FirebaseStorage.getInstance();
-            StorageReference storageReference = storage.getReference().child("Product Image").child(currentUid);
+            String key = rootRef.push().getKey().toString();
+            StorageReference storageReference = storage.getReference().child("Product Image").child(currentUid).child(key);
             storageReference.putFile(selectedImage).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
@@ -165,7 +166,7 @@ rootRef.child("Shops").child(currentUid).addValueEventListener(new ValueEventLis
                                 product.put("imageUri",ImageUri);
                                 product.put("shopUid",currentUid);
 
-                                String key = rootRef.push().getKey().toString();
+
                                 product.put("key",key);
                                 productRef.child("Products").child(currentUid).child(key).setValue(product)
                                         .addOnCompleteListener(new OnCompleteListener<Void>() {

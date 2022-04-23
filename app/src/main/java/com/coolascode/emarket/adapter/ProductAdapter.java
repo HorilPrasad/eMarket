@@ -52,6 +52,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             Intent intent = new Intent(context, ProductDetailsActivity.class);
             intent.putExtra("shopid",product.getShopUid());
             intent.putExtra("key",product.getKey());
+            intent.putExtra("name",product.getProductName());
+            intent.putExtra("price",product.getProductPrice());
+            intent.putExtra("imageurl",product.getImageUri());
+            intent.putExtra("desc",product.getProductDesc());
             context.startActivity(intent);
         });
     }

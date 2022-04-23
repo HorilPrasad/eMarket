@@ -9,9 +9,9 @@
         tools:context=".fragment.AccountFragment">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:orientation="horizontal"
-            android:background="@drawable/bg_gradiant">
+            android:background="@color/orange_700">
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -65,6 +65,10 @@
                 android:layout_gravity="center_horizontal"/>
 
         </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -149,27 +153,32 @@
                         android:layout_marginEnd="10dp"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal">
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="HOME"
-                android:layout_gravity="bottom"
-                android:background="@color/yellow_500"
-                android:layout_margin="10dp"
-                />
-            <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Logout"
-                android:background="@color/yellow_500"
-                android:layout_gravity="bottom"
-                android:layout_margin="10dp"
-                />
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOME"
+                    android:layout_gravity="bottom"
+                    android:background="@color/yellow_500"
+                    android:layout_margin="10dp"
+                    />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:background="@color/yellow_500"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="10dp"
+                    />
+            </LinearLayout>
         </LinearLayout>
+
+
+    </ScrollView>
+
     </LinearLayout>

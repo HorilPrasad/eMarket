@@ -1,14 +1,18 @@
 package com.coolascode.emarket.activity;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.coolascode.emarket.R;
 import com.coolascode.emarket.modal.Product;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -18,10 +22,12 @@ import com.squareup.picasso.Picasso;
 
 public class ProductDetailsActivity extends AppCompatActivity {
 
-    String shopUid,key;
+    String shopUid,key,url,price,name,dsc;
     TextView shopName,productName,productDesc,productPrice;
     ImageView productImg;
     DatabaseReference rootRef;
+    ImageView back;
+    Button addcart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,35 +36,34 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
        shopUid = getIntent().getStringExtra("shopid");
         key = getIntent().getStringExtra("key");
+        name =getIntent().getStringExtra("name");
+        price = getIntent().getStringExtra("price");
+        url = getIntent().getStringExtra("imageurl");
+        dsc = getIntent().getStringExtra("desc");
 
         shopName = findViewById(R.id.shopName_details);
         productName = findViewById(R.id.productName_details);
         productDesc = findViewById(R.id.productDescription_details);
         productPrice = findViewById(R.id.productPrice_details);
-        rootRef = FirebaseDatabase.getInstance().getReference();
-        //retrive();
-    }
+        productImg = findViewById(R.id.productImage_details);
+        back = findViewById(R.id.backButton_details);
+        addcart = findViewById(R.id.addToCartButton);
 
-    void retrive(){
 
-        rootRef.child("Products").child(shopUid).child(key).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                String name = snapshot.child("productName").getValue().toString();
-                String price = snapshot.child("productPrice").getValue().toString();
-                String desc = snapshot.child("productDesc").getValue().toString();
-                String image = snapshot.child("imageUri").getValue().toString();
-                productName.setText(name);
-                productPrice.setText(price);
-                productDesc.setText(desc);
-                Picasso.get().load(image).placeholder(R.drawable.image).into(productImg);
-            }
+        productDesc.setText(dsc);
+        productName.setText(name);
+        productPrice.setText(price);
+        Picasso.get().load(url).into(productImg);
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
 
-            }
+        back.setOnClickListener(v->{
+            onBackPressed();
+        });
+        addcart.setOnClickListener(v->{
+            Toast.makeText(ProductDetailsActivity.this, "Saved in cart", Toast.LENGTH_SHORT).show();
         });
 
+
     }
+
 }

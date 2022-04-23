@@ -15,7 +15,7 @@
         android:layout_alignParentStart="true">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/backButton"
+            android:id="@+id/backButton_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -34,7 +34,7 @@
             android:layout_weight="20"
             android:textSize="20sp"
             android:gravity="center_horizontal"
-            android:text="Abhishek Groceries"
+            android:text="Product Details"
             android:padding="4dp"/>
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/cartButton"

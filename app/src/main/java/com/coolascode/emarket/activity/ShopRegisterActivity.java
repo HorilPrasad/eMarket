@@ -83,7 +83,7 @@ public class ShopRegisterActivity extends AppCompatActivity {
         shopbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(ShopRegisterActivity.this, ShopLoginActivity.class);
+                Intent i = new Intent(ShopRegisterActivity.this, UserLoginActivity.class);
 
                 startActivity(i);
             }

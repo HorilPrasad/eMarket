@@ -7,6 +7,7 @@ public class Product {
     private String shopType;
     private String imageUri;
     private String key;
+    private String productDesc;
 
 
     public Product() {
@@ -18,14 +19,22 @@ public class Product {
     }
 
 
-
-    public Product(String productName, String productPrice, String shopUid, String shopType, String imageUri, String key) {
+    public Product(String productName, String productPrice, String shopUid, String shopType, String imageUri, String key, String productDesc) {
         this.productName = productName;
         this.productPrice = productPrice;
         this.shopUid = shopUid;
         this.shopType = shopType;
         this.imageUri = imageUri;
         this.key = key;
+        this.productDesc = productDesc;
+    }
+
+    public String getProductDesc() {
+        return productDesc;
+    }
+
+    public void setProductDesc(String productDesc) {
+        this.productDesc = productDesc;
     }
 
     public String getImageUri() {
