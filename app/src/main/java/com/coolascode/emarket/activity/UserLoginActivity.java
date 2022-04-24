@@ -3,6 +3,7 @@ package com.coolascode.emarket.activity;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -42,6 +43,7 @@ public class UserLoginActivity extends AppCompatActivity {
     Button loginBtn;
     TextView forgetPass;
     private FusedLocationProviderClient fusedLocationProviderClient;
+    ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +59,11 @@ public class UserLoginActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(UserLoginActivity.this,
                     new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
         }
+
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setCancelable(false);
+        progressDialog.setCanceledOnTouchOutside(false);
+        progressDialog.setMessage("Login...");
 
         userLoginEmail = findViewById(R.id.login_email_edit_text);
         userLoginPass = findViewById(R.id.login_password_edit_text);
@@ -139,8 +146,7 @@ public class UserLoginActivity extends AppCompatActivity {
             userLoginPass.setError("Password can't be Empty!");
             userLoginPass.requestFocus();
         } else {
-
-//            loading();
+progressDialog.show();
 
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -148,16 +154,16 @@ public class UserLoginActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
-//                                loading.dismiss();
 //                                currentUser = mAuth.getCurrentUser();\
                                 Toast.makeText(UserLoginActivity.this, "Authentication Successfull",
                                         Toast.LENGTH_SHORT).show();
+                                progressDialog.dismiss();
                                 sentToMainActivity();
                             } else {
                                 // If sign in fails, display a message to the user.
-//                                loading.dismiss();
                                 Toast.makeText(UserLoginActivity.this, "Authentication failed.",
                                         Toast.LENGTH_SHORT).show();
+                                progressDialog.dismiss();
 
                                 // ...
                             }
@@ -171,5 +177,6 @@ public class UserLoginActivity extends AppCompatActivity {
     private void sentToMainActivity() {
         Intent i = new Intent(UserLoginActivity.this, MainActivity.class);
         startActivity(i);
+        finishAffinity();
     }
 }

@@ -5,12 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.coolascode.emarket.R;
 import com.coolascode.emarket.adapter.ProductAdapter;
+import com.coolascode.emarket.fragment.AccountFragment;
 import com.coolascode.emarket.modal.Product;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -36,6 +39,7 @@ public class ProductListActivity extends AppCompatActivity {
     ArrayList<Product> productArrayList;
     ProductAdapter productAdapter;
     String currentUserId;
+    ImageView backBtn,AccountBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,12 +51,23 @@ public class ProductListActivity extends AppCompatActivity {
 
         productRecycler = findViewById(R.id.product_list_recycler);
         shopName = findViewById(R.id.shopName_product_list);
+        backBtn = findViewById(R.id.backButton_product_list);
+        AccountBtn = findViewById(R.id.account_product_listBtn);
+
         shopName.setText(shop_name);
         productArrayList = new ArrayList<>();
         productAdapter = new ProductAdapter(ProductListActivity.this,productArrayList);
         GridLayoutManager layoutManager = new GridLayoutManager(this,2,RecyclerView.VERTICAL,false);
         productRecycler.setLayoutManager(layoutManager);
         productRecycler.setAdapter(productAdapter);
+
+        backBtn.setOnClickListener(v->{
+            onBackPressed();
+        });
+
+        AccountBtn.setOnClickListener(v->{
+            startActivity(new Intent(ProductListActivity.this, MainActivity.class));
+        });
 
     }
 
@@ -72,7 +87,6 @@ public class ProductListActivity extends AppCompatActivity {
                 for (DataSnapshot snapshot1:snapshot.getChildren())
                 {
                     Product product = snapshot1.getValue(Product.class);
-                    Toast.makeText(ProductListActivity.this, product.getProductName(), Toast.LENGTH_SHORT).show();
                     productArrayList.add(product);
                 }
 

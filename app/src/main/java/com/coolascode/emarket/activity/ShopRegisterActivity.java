@@ -224,6 +224,7 @@ public class ShopRegisterActivity extends AppCompatActivity {
     private void sentToMainActivity() {
 
         Intent i = new Intent(ShopRegisterActivity.this, VerifyEmailActivity.class);
+        finishAffinity();
         startActivity(i);
     }
 }

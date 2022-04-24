@@ -27,6 +27,7 @@ public class ShopDashboardActivity extends AppCompatActivity {
      String currentUserId;
      TextView shop_name;
      String shopName;
+     CardView logOut,productListCard;
 ProgressDialog loading;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +35,28 @@ ProgressDialog loading;
         setContentView(R.layout.activity_shop_dashboard);
 
 
+        logOut = findViewById(R.id.seller_log_out);
         mAuth=FirebaseAuth.getInstance();
         currentUser=mAuth.getCurrentUser();
         currentUserId=currentUser.getUid();
         rootRef=FirebaseDatabase.getInstance().getReference();
         shop_name=findViewById(R.id.shopName);
         addProduct = findViewById(R.id.addProduct);
+        productListCard = findViewById(R.id.product_list_card);
+
+
+        productListCard.setOnClickListener(v->{
+            Intent intent=new Intent(ShopDashboardActivity.this, ProductListActivity.class);
+            intent.putExtra("uid",currentUserId);
+            intent.putExtra("shopname",shopName);
+            startActivity(intent);
+        });
+
+        logOut.setOnClickListener(v->{
+            mAuth.signOut();
+            startActivity(new Intent(ShopDashboardActivity.this,UserLoginActivity.class));
+            finishAffinity();
+        });
 
         addProduct.setOnClickListener(v->{
             startActivity(new Intent(ShopDashboardActivity.this,AddProductActivity.class));

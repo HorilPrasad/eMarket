@@ -15,7 +15,7 @@
         android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/backButton"
+            android:id="@+id/backButton_product_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -37,13 +37,13 @@
             android:text="Abhishek Groceries"
             android:padding="4dp"/>
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/cartButton"
+            android:id="@+id/account_product_listBtn"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:src="@drawable/ic_home_black"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/ic_profile"
             android:padding="4dp"/>
     </LinearLayout>
 

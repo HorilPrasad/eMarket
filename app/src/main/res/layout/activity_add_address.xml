@@ -74,11 +74,11 @@
                 android:gravity="left"/>
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/nameInput"
+                android:id="@+id/nameInput_address"
                 android:background="@drawable/edit_text_border"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="5dp"
+                android:padding="8dp"
                 android:inputType="text"
                 android:layout_margin="5dp"
                 />
@@ -99,13 +99,13 @@
                 android:gravity="left"/>
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/mobileNumberInput"
+                android:id="@+id/mobileNumberInput_address"
                 android:background="@drawable/edit_text_border"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:maxLength="10"
-                android:padding="5dp"
+                android:padding="8dp"
                 android:layout_margin="5dp"/>
 
         </LinearLayout>
@@ -124,13 +124,13 @@
                 android:gravity="left"/>
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/pincodeInput"
+                android:id="@+id/pincodeInput_address"
                 android:background="@drawable/edit_text_border"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:maxLength="10"
-                android:padding="5dp"
+                android:padding="8dp"
                 android:layout_margin="5dp"/>
 
         </LinearLayout>
@@ -149,12 +149,12 @@
                 android:gravity="left"/>
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/localityInput"
+                android:id="@+id/localityInput_address"
                 android:background="@drawable/edit_text_border"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:padding="5dp"
+                android:padding="8dp"
                 android:layout_margin="5dp"/>
 
         </LinearLayout>
@@ -178,7 +178,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="text"
-                android:padding="5dp"
+                android:padding="8dp"
                 android:layout_margin="5dp"/>
 
         </LinearLayout>
@@ -208,18 +208,18 @@
 
 
     </LinearLayout>
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/addAddressButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:background="@color/yellow_700"
         android:text="Add Address"
         android:textColor="@color/white"
         android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        />
+        android:textStyle="bold" />
 
 </RelativeLayout>
