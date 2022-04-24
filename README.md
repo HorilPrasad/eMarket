@@ -10,7 +10,7 @@ Proposed Solution
 
 we found that if we add local shops to an app and the local customer can buy the product from that shop. he will get it very fast and at a reasonable price because he is purchasing from his locality. In this way, we can reduce the delivery time, delivery charge and other costs of a product.
 # Demo Video Link:
-https://drive.google.com/file/d/1UtI6CYVYjD5X1slj3pNfeM1aNPwVjIvY/view?usp=drivesdk
+https://youtu.be/jTA2evWlnuo
 
 # Presentation Link:
 https://docs.google.com/presentation/d/1cFsXbKkNT1nJ6KsK3vzvs-1asuaVAQDQ/edit?usp=sharing&ouid=117425978731025313980&rtpof=true&sd=true
